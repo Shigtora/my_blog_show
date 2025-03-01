@@ -2,8 +2,7 @@
 date : '2025-02-26T00:11:50+08:00'
 draft : False
 title : 'LaTeX学习'
-image : https://raw.githubusercontent.com/Shigtora/my_blog_img/main/2.jpg
-categories : 
+image : https://pic1.imgdb.cn/item/67c32b3ad0e0a243d409454d.jpg
   技能
 ---
 

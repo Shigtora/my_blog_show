@@ -6,16 +6,7 @@
         <description>Recent content in Categories on ShiMyy</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>ShiMy</copyright>
-        <lastBuildDate>Wed, 26 Feb 2025 00:11:50 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>技能</title>
-        <link>https://example.com/categories/%E6%8A%80%E8%83%BD/</link>
-        <pubDate>Wed, 26 Feb 2025 00:11:50 +0800</pubDate>
-        
-        <guid>https://example.com/categories/%E6%8A%80%E8%83%BD/</guid>
-        <description></description>
-        </item>
-        <item>
+        <copyright>ShiMy</copyright><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Test</title>
         <link>https://example.com/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>技能 on ShiMyy</title>
-        <link>https://example.com/categories/%E6%8A%80%E8%83%BD/</link>
+        <link>http://localhost:1313/categories/%E6%8A%80%E8%83%BD/</link>
         <description>Recent content in 技能 on ShiMyy</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>ShiMy</copyright>
-        <lastBuildDate>Wed, 26 Feb 2025 00:11:50 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%8A%80%E8%83%BD/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Feb 2025 00:11:50 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%8A%80%E8%83%BD/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LaTeX学习</title>
-        <link>https://example.com/p/latex%E5%AD%A6%E4%B9%A0/</link>
+        <link>http://localhost:1313/p/latex%E5%AD%A6%E4%B9%A0/</link>
         <pubDate>Wed, 26 Feb 2025 00:11:50 +0800</pubDate>
         
-        <guid>https://example.com/p/latex%E5%AD%A6%E4%B9%A0/</guid>
+        <guid>http://localhost:1313/p/latex%E5%AD%A6%E4%B9%A0/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/Shigtora/my_blog_img/main/2.jpg" alt="Featured image of post LaTeX学习" /&gt;&lt;h2 id=&#34;1-引言&#34;&gt;1. 引言
 &lt;/h2&gt;&lt;h3 id=&#34;11-什么是latex&#34;&gt;1.1 什么是LaTeX
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;LaTeX&lt;/strong&gt;‌是一种基于ΤΕΧ的排版系统，与大众普遍使用的Word等&lt;em&gt;所见即所得&lt;/em&gt;的文档编排工具不同,LaTeX是采用&lt;em&gt;所想即所得&lt;/em&gt;的写作逻辑，用户通过LaTeX语言描述内容结构，由编译器生成精美的PDF文本。&lt;/p&gt;
