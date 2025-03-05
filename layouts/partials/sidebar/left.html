@@ -101,3 +101,54 @@
         </li>
     </ol>
 </aside>
+
+<div class="progress-wrapper" style="padding: 0">
+<div class="progress-info">
+<div class="progress-label">
+<span id="yearprogress_yearname"></span>
+</div>
+<div id="yearprogress_text_container" class="progress-percentage">
+<span id="yearprogress_progresstext"></span>
+<span id="yearprogress_progresstext_full"></span>
+</div>
+</div>
+<div class="progress">
+<div id="yearprogress_progressbar" class="progress-bar bg-primary"></div>
+</div>
+</div>
+<script no-pjax="">
+function yearprogress_refresh() {
+let year = new Date().getFullYear();
+$("#yearprogress_yearname").text(year);
+let from = new Date(year, 0, 1, 0, 0, 0);
+let to = new Date(year, 11, 31, 23, 59, 59);
+let now = new Date();
+let progress = (((now - from) / (to - from + 1)) * 100).toFixed(7);
+let progressshort = (((now - from) / (to - from + 1)) * 100).toFixed(2);
+$("#yearprogress_progresstext").text(progressshort + "%");
+$("#yearprogress_progresstext_full").text(progress + "%");
+$("#yearprogress_progressbar").css("width", progress + "%");
+}
+yearprogress_refresh();
+if (typeof yearProgressIntervalHasSet == "undefined") {
+var yearProgressIntervalHasSet = true;
+setInterval(function () {
+yearprogress_refresh();
+}, 500);
+}
+</script>
+<style>
+#yearprogress_text_container {
+width: 100%;
+height: 22px;
+overflow: hidden;
+user-select: none;
+}
+#yearprogress_text_container > span {
+transition: all 0.3s ease;
+display: block;
+}
+#yearprogress_text_container:hover > span {
+transform: translateY(-45px);
+}
+</style>

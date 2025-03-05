@@ -6,11 +6,11 @@
 
 <link rel='canonical' href='https://example.com/post/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Posts">
+<link rel="stylesheet" href="/scss/style.min.19f8957f0a49ce92e05969eeb61c79d6b5b6c2a66fd7c9dea34c631a1a46387c.css"><meta property='og:title' content="Posts">
 <meta property='og:description' content="一个兴趣使然的人">
 <meta property='og:url' content='https://example.com/post/'>
 <meta property='og:site_name' content='ShiMyy'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-02-26T00:00:00&#43;00:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-03-04T00:11:50&#43;08:00 '/>
 <meta name="twitter:title" content="Posts">
 <meta name="twitter:description" content="一个兴趣使然的人"><link rel="alternate" type="application/rss&#43;xml" href="https://example.com/post/index.xml">
     </head>
@@ -235,6 +235,56 @@
     </ol>
 </aside>
 
+<div class="progress-wrapper" style="padding: 0">
+<div class="progress-info">
+<div class="progress-label">
+<span id="yearprogress_yearname"></span>
+</div>
+<div id="yearprogress_text_container" class="progress-percentage">
+<span id="yearprogress_progresstext"></span>
+<span id="yearprogress_progresstext_full"></span>
+</div>
+</div>
+<div class="progress">
+<div id="yearprogress_progressbar" class="progress-bar bg-primary"></div>
+</div>
+</div>
+<script no-pjax="">
+function yearprogress_refresh() {
+let year = new Date().getFullYear();
+$("#yearprogress_yearname").text(year);
+let from = new Date(year, 0, 1, 0, 0, 0);
+let to = new Date(year, 11, 31, 23, 59, 59);
+let now = new Date();
+let progress = (((now - from) / (to - from + 1)) * 100).toFixed(7);
+let progressshort = (((now - from) / (to - from + 1)) * 100).toFixed(2);
+$("#yearprogress_progresstext").text(progressshort + "%");
+$("#yearprogress_progresstext_full").text(progress + "%");
+$("#yearprogress_progressbar").css("width", progress + "%");
+}
+yearprogress_refresh();
+if (typeof yearProgressIntervalHasSet == "undefined") {
+var yearProgressIntervalHasSet = true;
+setInterval(function () {
+yearprogress_refresh();
+}, 500);
+}
+</script>
+<style>
+#yearprogress_text_container {
+width: 100%;
+height: 22px;
+overflow: hidden;
+user-select: none;
+}
+#yearprogress_text_container > span {
+transition: all 0.3s ease;
+display: block;
+}
+#yearprogress_text_container:hover > span {
+transform: translateY(-45px);
+}
+</style>
     <aside class="sidebar right-sidebar sticky">
         
             
@@ -279,6 +329,18 @@
 
     <div class="tagCloud-tags">
         
+            <a href="/categories/latex/" class="font_size_2">
+                LaTeX
+            </a>
+        
+            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="font_size_2">
+                工具
+            </a>
+        
+            <a href="/categories/%E7%A7%91%E7%A0%94/" class="font_size_2">
+                科研
+            </a>
+        
     </div>
 </section>
 
@@ -297,7 +359,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">1 个页面</h3>
+                <h3 class="section-count">2 个页面</h3>
                 <h1 class="section-term">Posts</h1>
                 
             </div>
@@ -307,16 +369,33 @@
     <section class="article-list--compact">
         
             <article>
-    <a href="/p/latex%E5%AD%A6%E4%B9%A0/">
+    <a href="/p/tikz/">
         <div class="article-details">
-            <h2 class="article-title">LaTeX学习</h2>
+            <h2 class="article-title">TikZ</h2>
+            <footer class="article-time">
+                <time datetime='2025-03-04T00:11:50&#43;08:00'>Mar 04, 2025</time>
+            </footer>
+        </div>
+            <div class="article-image">
+                
+                    <img src="https://pic1.imgdb.cn/item/67c5da41d0e0a243d40aed94.jpg" loading="lazy" alt="Featured image of post TikZ" />
+                
+            </div>
+        
+    </a>
+</article>
+        
+            <article>
+    <a href="/p/latex%E4%BB%8B%E7%BB%8D/">
+        <div class="article-details">
+            <h2 class="article-title">LaTeX介绍</h2>
             <footer class="article-time">
                 <time datetime='2025-02-26T00:11:50&#43;08:00'>Feb 26, 2025</time>
             </footer>
         </div>
             <div class="article-image">
                 
-                    <img src="https://pic1.imgdb.cn/item/67c32b3ad0e0a243d409454d.jpg%20%e6%8a%80%e8%83%bd" loading="lazy" alt="Featured image of post LaTeX学习" />
+                    <img src="https://pic1.imgdb.cn/item/67c32b3ad0e0a243d409454d.jpg" loading="lazy" alt="Featured image of post LaTeX介绍" />
                 
             </div>
         
@@ -403,51 +482,6 @@
     initTocHide()
 </script>
 
-<style>
-    #backTopBtn {
-        display: none;
-        position: fixed;
-        bottom: 30px;
-        z-index: 99;
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
-        background-image: url(https://example.com/icons/backTop.svg);
-    }
-</style>
-
-<script>
-    
-
-    function initScrollTop() {
-        let rightSideBar = document.querySelector(".right-sidebar");
-        if (!rightSideBar) {
-            return;
-        }
-        
-        let btn = document.createElement("div");
-        btn.id = "backTopBtn";
-        btn.onclick = backToTop
-        rightSideBar.appendChild(btn)
-        
-        window.onscroll = function() {
-            
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
-    }
-
-    
-
-    function backToTop(){
-        window.scrollTo({ top: 0, behavior: "smooth" })
-    }
-
-    initScrollTop();
-</script>
 
 <style>
     .highlight {
@@ -575,6 +609,52 @@
     }
     
     showHideView();
+</script>
+
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://example.com/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
 </script>
 
     </body>
