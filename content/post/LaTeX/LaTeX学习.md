@@ -2,6 +2,7 @@
 date : '2025-02-26T00:11:50+08:00'
 draft : False
 title : 'LaTeX介绍'
+math : true
 image : https://pic1.imgdb.cn/item/67c5da41d0e0a243d40aed94.jpg
 categories: 
   - LaTeX

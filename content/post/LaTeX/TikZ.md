@@ -2,6 +2,7 @@
 date : '2025-03-04T00:11:50+08:00'
 draft : False
 title : 'TikZ'
+math: true
 image : https://pic1.imgdb.cn/item/67c9745f066befcec6df1a71.jpg
 categories: 
   - LaTeX
