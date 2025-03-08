@@ -245,10 +245,11 @@ related:
           weight: 200
 
 markup:
+    enable: true
     goldmark:
         extensions:
-            mathjax:
-                enable: true # 启用数学公式扩展
+            # mathjax:
+            #     enable: true # 启用数学公式扩展
             passthrough:
                 enable: true
                 delimiters:
