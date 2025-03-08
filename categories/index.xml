@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>ShiMy</copyright>
-        <lastBuildDate>Tue, 04 Mar 2025 00:11:50 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 00:11:50 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>随笔</title>
+        <link>https://example.com/categories/%E9%9A%8F%E7%AC%94/</link>
+        <pubDate>Sun, 09 Mar 2025 00:11:50 +0800</pubDate>
+        
+        <guid>https://example.com/categories/%E9%9A%8F%E7%AC%94/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>物理</title>
+        <link>https://example.com/categories/%E7%89%A9%E7%90%86/</link>
+        <pubDate>Sun, 09 Mar 2025 00:11:50 +0800</pubDate>
+        
+        <guid>https://example.com/categories/%E7%89%A9%E7%90%86/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>LaTeX</title>
         <link>https://example.com/categories/latex/</link>
         <pubDate>Tue, 04 Mar 2025 00:11:50 +0800</pubDate>

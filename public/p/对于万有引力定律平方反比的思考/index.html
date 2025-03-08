@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="1. 引言 早在高中刚学力学的时候，我们便接触了牛顿万有引力定律，即：\n$$ F=\\frac{GMm}{r^2} $$与此同时，在后续学习电磁学的过程中，我们也了解了库仑定律的公式：\n$$ F=\\frac{kQq}{r^2} $$年少的我曾非常好奇，两个看似完全属于两个领域的公式（力学与电磁学），为何能如此相像，而它们两者的分母上的变量$r$的指数，竟然都是二次方。直觉告诉我，这并不是一个巧合，只是当时的我也并没有意识到，这个小小的指数背后蕴含着如此深刻的奥秘。\n">
+<title>对于万有引力定律平方反比的思考</title>
+
+<link rel='canonical' href='https://example.com/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/'>
+
+<link rel="stylesheet" href="/scss/style.min.19f8957f0a49ce92e05969eeb61c79d6b5b6c2a66fd7c9dea34c631a1a46387c.css"><meta property='og:title' content="对于万有引力定律平方反比的思考">
+<meta property='og:description' content="1. 引言 早在高中刚学力学的时候，我们便接触了牛顿万有引力定律，即：\n$$ F=\\frac{GMm}{r^2} $$与此同时，在后续学习电磁学的过程中，我们也了解了库仑定律的公式：\n$$ F=\\frac{kQq}{r^2} $$年少的我曾非常好奇，两个看似完全属于两个领域的公式（力学与电磁学），为何能如此相像，而它们两者的分母上的变量$r$的指数，竟然都是二次方。直觉告诉我，这并不是一个巧合，只是当时的我也并没有意识到，这个小小的指数背后蕴含着如此深刻的奥秘。\n">
+<meta property='og:url' content='https://example.com/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/'>
+<meta property='og:site_name' content='ShiMyy'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-09T00:11:50&#43;08:00'/><meta property='article:modified_time' content='2025-03-09T00:11:50&#43;08:00'/><meta property='og:image' content='https://pic1.imgdb.cn/item/67cc88b9066befcec6e16f29.jpg' />
+<meta name="twitter:title" content="对于万有引力定律平方反比的思考">
+<meta name="twitter:description" content="1. 引言 早在高中刚学力学的时候，我们便接触了牛顿万有引力定律，即：\n$$ F=\\frac{GMm}{r^2} $$与此同时，在后续学习电磁学的过程中，我们也了解了库仑定律的公式：\n$$ F=\\frac{kQq}{r^2} $$年少的我曾非常好奇，两个看似完全属于两个领域的公式（力学与电磁学），为何能如此相像，而它们两者的分母上的变量$r$的指数，竟然都是二次方。直觉告诉我，这并不是一个巧合，只是当时的我也并没有意识到，这个小小的指数背后蕴含着如此深刻的奥秘。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://pic1.imgdb.cn/item/67cc88b9066befcec6e16f29.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/pink_hu_2d2f63b59f6cf429.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🐱</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">ShiMyy</a></h1>
+            <h2 class="site-description">一个兴趣使然的人</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Shigtora'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.zhihu.com/people/sui-yuan-54-69'
+                        target="_blank"
+                        title="知乎"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-zhihu"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 6h6v12h-2l-2 2l-1 -2h-1z" /><path d="M4 12h6.5" /><path d="M10.5 6h-5" /><path d="M6 4c-.5 2.5 -1.5 3.5 -2.5 4.5" /><path d="M8 6v7c0 4.5 -2 5.5 -4 7" /><path d="M11 18l-3 -5" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+<div class="progress-wrapper" style="padding: 0">
+<div class="progress-info">
+<div class="progress-label">
+<span id="yearprogress_yearname"></span>
+</div>
+<div id="yearprogress_text_container" class="progress-percentage">
+<span id="yearprogress_progresstext"></span>
+<span id="yearprogress_progresstext_full"></span>
+</div>
+</div>
+<div class="progress">
+<div id="yearprogress_progressbar" class="progress-bar bg-primary"></div>
+</div>
+</div>
+<script no-pjax="">
+function yearprogress_refresh() {
+let year = new Date().getFullYear();
+$("#yearprogress_yearname").text(year);
+let from = new Date(year, 0, 1, 0, 0, 0);
+let to = new Date(year, 11, 31, 23, 59, 59);
+let now = new Date();
+let progress = (((now - from) / (to - from + 1)) * 100).toFixed(7);
+let progressshort = (((now - from) / (to - from + 1)) * 100).toFixed(2);
+$("#yearprogress_progresstext").text(progressshort + "%");
+$("#yearprogress_progresstext_full").text(progress + "%");
+$("#yearprogress_progressbar").css("width", progress + "%");
+}
+yearprogress_refresh();
+if (typeof yearProgressIntervalHasSet == "undefined") {
+var yearProgressIntervalHasSet = true;
+setInterval(function () {
+yearprogress_refresh();
+}, 500);
+}
+</script>
+<style>
+#yearprogress_text_container {
+width: 100%;
+height: 22px;
+overflow: hidden;
+user-select: none;
+}
+#yearprogress_text_container > span {
+transition: all 0.3s ease;
+display: block;
+}
+#yearprogress_text_container:hover > span {
+transform: translateY(-45px);
+}
+</style>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1-引言">1. 引言</a></li>
+    <li><a href="#2-猜想">2. 猜想</a></li>
+    <li><a href="#3-理论推导">3. 理论推导</a>
+      <ol>
+        <li><a href="#31-三维空间">3.1 三维空间</a></li>
+        <li><a href="#32-n维空间">3.2 n维空间</a></li>
+      </ol>
+    </li>
+    <li><a href="#4-可视化模拟">4. 可视化模拟</a>
+      <ol>
+        <li><a href="#41-平方反比">4.1 平方反比</a></li>
+        <li><a href="#42-05次方反比">4.2 0.5次方反比</a></li>
+        <li><a href="#43-1次方反比">4.3 1次方反比</a></li>
+        <li><a href="#44-15次方反比">4.4 1.5次方反比</a></li>
+        <li><a href="#45-25次方反比">4.5 2.5次方反比</a></li>
+        <li><a href="#46-3次方反比">4.6 3次方反比</a></li>
+      </ol>
+    </li>
+    <li><a href="#5-结语">5. 结语</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/">
+                
+                    <img src="https://pic1.imgdb.cn/item/67cc88b9066befcec6e16f29.jpg" loading="lazy" alt="Featured image of post 对于万有引力定律平方反比的思考" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%89%A9%E7%90%86/" >
+                物理
+            </a>
+        
+            <a href="/categories/%E9%9A%8F%E7%AC%94/" >
+                随笔
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/">对于万有引力定律平方反比的思考</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 09, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+<div class="article-details">
+    <footer class="article-time">
+        
+        <div id="viewCount">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+            <time class="article-time--reading">
+                
+                <span id="vercount_value_page_pv">Loading</span> 次
+            </time>
+        </div>
+    </footer>
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="1-引言">1. 引言
+</h2><p>早在高中刚学力学的时候，我们便接触了牛顿万有引力定律，即：</p>
+$$
+F=\frac{GMm}{r^2}
+$$<p>与此同时，在后续学习电磁学的过程中，我们也了解了库仑定律的公式：</p>
+$$
+F=\frac{kQq}{r^2}
+$$<p>年少的我曾非常好奇，两个看似完全属于两个领域的公式（力学与电磁学），为何能如此相像，而它们两者的分母上的变量$r$的指数，竟然都是二次方。直觉告诉我，这并不是一个巧合，只是当时的我也并没有意识到，这个小小的指数背后蕴含着如此深刻的奥秘。</p>
+<h2 id="2-猜想">2. 猜想
+</h2><p>在最初还未开始研究时，我的猜想是：万有引力和库仑力都是一个物体对一个物体的作用力，力所产生的“能量”效果会随着空间距离的变大而减弱，比如声音的能量会随着空间距离变大减弱，所以我们听到的声音会有近大远小的效果。与此同时，<strong>我们生活的在一个三维空间，能量是以三维球面向外递减的</strong>（如下图所示），所以我们得到的$r$的指数是平方。<a class="link" href="https://pic1.imgdb.cn/item/67cc8c6b066befcec6e16ff8.png"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8c6b066befcec6e16ff8.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="曲面.png"
+	
+	
+></a>
+通过与大物老师的交流，我印证了我的猜想方向是正确的。而从这进行拓展便有联想，假如$r$的指数与空间维度有关，三维空间中所测的万有引力定律（通过卡文迪许的扭秤实验）满足平方反比：</p>
+$$
+F\propto\frac{1}{r^2}
+$$<p>那么在四维空间中，便满足三次方反比定律：</p>
+$$
+F\propto\frac{1}{r^3}
+$$<p>n维空间就有：</p>
+$$
+F\propto \frac{1}{r^{n-1}}
+$$<p>这便引申出一些有意思的研究：假如有只蚂蚁科学家在黑板这一二维平面内对<strong>万有引力定律</strong>进行研究，它测得的万有引力定律满足平方反比，它便会发现自己生活的空间其实并不是二维的，而是三维的。
+一些科学家正在做的便是这个。
+这便引申出一些有意思的研究：假如有只蚂蚁科学家在黑板这一二维平面内对<strong>万有引力定律</strong>进行研究，它测得的万有引力定律满足平方反比，它便会发现自己生活的空间其实并不是二维的，而是三维的。
+一些科学家正在做的便是这个。
+假如我们能够在宇宙的某处测得万有引力定律并不满足平方反比，而是满足$F\propto\frac{1}{r^{2.5}}$，甚至$F\propto\frac{1}{r^{3}}$，那就可以证明我们的宇宙其实有更高维的存在，这种现象被称为<strong>引力泄漏</strong>。</p>
+<h2 id="3-理论推导">3. 理论推导
+</h2><h3 id="31-三维空间">3.1 三维空间
+</h3><p>下面对先对我们生活的三维空间中万有引定律满足：$F\propto \frac{1}{r^{2}}$进行推导：
+引力场为保守场，符合高斯定理：</p>
+$$
+\oint_{\partial V} \vec{g}\cdot d\vec{A}=-4\pi GM_{i}
+$$<p>其中：</p>
+<ul>
+<li>$\partial V$表示任意闭合曲面;</li>
+<li>$\vec{g}$表示引力场;</li>
+<li>$d\vec{A}$表示微元的一个;</li>
+<li>$G$为万有引力常数;</li>
+<li>$M{i}$表示闭合曲面内（i&ndash;&gt;in）的总质量。</li>
+<li>该式左边表示引力场线穿过闭合曲面的通量，右侧表示曲面包含的总质量。</li>
+</ul>
+<p>接着，由于三维空间中场线沿球对称分布，以质量为中心的球面作为高斯面，该球面上任意一点的引力场大小处处相等，便有：</p>
+$$
+g(r) \cdot 4\pi r^2=-4\pi GM_{s}
+$$$$
+g(r)=\frac{-GM_s}{r^2}
+$$$$
+\therefore g \propto\frac{1}{r^2}
+$$$$
+\square
+$$<p>其中：$M_s$表示该曲面上（”球壳“，s&ndash;&gt;surface)的质量。</p>
+<h3 id="32-n维空间">3.2 n维空间
+</h3><p>到了n维空间，广义高斯定理可写为：</p>
+$$
+\oint_{\partial V} \vec{g}\cdot d\vec{A} \propto M_{i} \Rightarrow g(r)\propto\frac{1}{r^{n-1}}
+$$<h2 id="4-可视化模拟">4. 可视化模拟
+</h2><p>在经过了简易的理论推导后，我又开始好奇：在三维空间中满足平方反比的万有引力作用下，质量小的行星会围绕质量大的恒星作近似圆周运动，<strong>那么在成n次方反比的空间中，形体的运动轨迹回事如何的呢？</strong>
+下面我将用manim和python进行模拟：</p>
+<h3 id="41-平方反比">4.1 平方反比
+</h3><p><a class="link" href="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17009.gif"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17009.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="平方反比.gif"
+	
+	
+></a></p>
+<h3 id="42-05次方反比">4.2 0.5次方反比
+</h3><p><a class="link" href="https://pic1.imgdb.cn/item/67cc8e79066befcec6e17005.gif"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8e79066befcec6e17005.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="0.5次方反比.gif"
+	
+	
+></a></p>
+<h3 id="43-1次方反比">4.3 1次方反比
+</h3><p><a class="link" href="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e1700a.gif"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e1700a.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="一次方反比.gif"
+	
+	
+></a></p>
+<h3 id="44-15次方反比">4.4 1.5次方反比
+</h3><p><a class="link" href="https://pic1.imgdb.cn/item/67cc8e79066befcec6e17006.gif"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8e79066befcec6e17006.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="1.5次方反比.gif"
+	
+	
+></a></p>
+<h3 id="45-25次方反比">4.5 2.5次方反比
+</h3><p><a class="link" href="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17007.gif"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17007.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="2.5次方反比.gif"
+	
+	
+></a></p>
+<h3 id="46-3次方反比">4.6 3次方反比
+</h3><p><a class="link" href="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17008.gif"  target="_blank" rel="noopener"
+    ><img src="https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17008.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="3次方反比.gif"
+	
+	
+></a>
+<em>在三次方的情况下，行星要么因速度过大而直接脱离轨道，发生逃逸，要么因速度过小而被逐渐“吸入”恒星。</em></p>
+<h2 id="5-结语">5. 结语
+</h2><p>至此，通过资料查询与学习，我终于了解到了万有引力定律平方反比的原因，解开了年少时的困惑。或许当年的我也没想到，这么一个小小的、不起眼的<strong>常数2</strong>，竟然蕴含了如此深邃的、有关宇宙的奥秘。而从manim展示的行星轨道图我们也可以看到，其余所有n次方反比的行星轨道图都没有<strong>平方反比</strong>的椭圆轨道来得如此简洁、优美，正是因为这样周期性的轨道，让我们拥有了一年四季、冬雪夏阳，我们是如此幸运与神奇地诞生在了这样的宇宙。
+<strong>平方反比律以椭圆的完美弧线，将星辰的呼吸与生命的脉搏，编织成了宇宙最深邃的数学与物理情书。</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 ShiMy
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://example.com/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+<script src="https://giscus.app/client.js"
+        data-repo="Shigtora/blog_comments"
+        data-repo-id="R_kgDOOBgpkQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOBgpkc4CndZx"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_dimmed"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<style>
+ 
+.giscus, 
+.giscus-frame {
+  width: 85%;
+  max-width: 760px;   
+  margin: 0 auto;      
+}
+</style>
+
+
+<script defer src="https://cn.vercount.one/js"></script>
+
+<script>
+    function showHideView() {
+        
+        let viewCounts = document.querySelectorAll("#viewCount");
+        if (viewCounts) {
+            
+            let article =  document.querySelector(".article-page");
+            if (!article) {
+                viewCounts.forEach(ele => {
+                    ele.style.display = 'none';
+                });
+            }
+        }
+    }
+    
+    showHideView();
+</script>
+
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://example.com/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+    </body>
+</html>

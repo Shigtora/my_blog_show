@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>物理 on ShiMyy</title>
+        <link>https://example.com/categories/%E7%89%A9%E7%90%86/</link>
+        <description>Recent content in 物理 on ShiMyy</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ShiMy</copyright>
+        <lastBuildDate>Sun, 09 Mar 2025 00:11:50 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>对于万有引力定律平方反比的思考</title>
+        <link>https://example.com/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/</link>
+        <pubDate>Sun, 09 Mar 2025 00:11:50 +0800</pubDate>
+        
+        <guid>https://example.com/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/</guid>
+        <description>&lt;img src="https://pic1.imgdb.cn/item/67cc88b9066befcec6e16f29.jpg" alt="Featured image of post 对于万有引力定律平方反比的思考" /&gt;&lt;h2 id=&#34;1-引言&#34;&gt;1. 引言
+&lt;/h2&gt;&lt;p&gt;早在高中刚学力学的时候，我们便接触了牛顿万有引力定律，即：&lt;/p&gt;
+$$
+F=\frac{GMm}{r^2}
+$$&lt;p&gt;与此同时，在后续学习电磁学的过程中，我们也了解了库仑定律的公式：&lt;/p&gt;
+$$
+F=\frac{kQq}{r^2}
+$$&lt;p&gt;年少的我曾非常好奇，两个看似完全属于两个领域的公式（力学与电磁学），为何能如此相像，而它们两者的分母上的变量$r$的指数，竟然都是二次方。直觉告诉我，这并不是一个巧合，只是当时的我也并没有意识到，这个小小的指数背后蕴含着如此深刻的奥秘。&lt;/p&gt;
+&lt;h2 id=&#34;2-猜想&#34;&gt;2. 猜想
+&lt;/h2&gt;&lt;p&gt;在最初还未开始研究时，我的猜想是：万有引力和库仑力都是一个物体对一个物体的作用力，力所产生的“能量”效果会随着空间距离的变大而减弱，比如声音的能量会随着空间距离变大减弱，所以我们听到的声音会有近大远小的效果。与此同时，&lt;strong&gt;我们生活的在一个三维空间，能量是以三维球面向外递减的&lt;/strong&gt;（如下图所示），所以我们得到的$r$的指数是平方。&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8c6b066befcec6e16ff8.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8c6b066befcec6e16ff8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;曲面.png&#34;
+	
+	
+&gt;&lt;/a&gt;
+通过与大物老师的交流，我印证了我的猜想方向是正确的。而从这进行拓展便有联想，假如$r$的指数与空间维度有关，三维空间中所测的万有引力定律（通过卡文迪许的扭秤实验）满足平方反比：&lt;/p&gt;
+$$
+F\propto\frac{1}{r^2}
+$$&lt;p&gt;那么在四维空间中，便满足三次方反比定律：&lt;/p&gt;
+$$
+F\propto\frac{1}{r^3}
+$$&lt;p&gt;n维空间就有：&lt;/p&gt;
+$$
+F\propto \frac{1}{r^{n-1}}
+$$&lt;p&gt;这便引申出一些有意思的研究：假如有只蚂蚁科学家在黑板这一二维平面内对&lt;strong&gt;万有引力定律&lt;/strong&gt;进行研究，它测得的万有引力定律满足平方反比，它便会发现自己生活的空间其实并不是二维的，而是三维的。
+一些科学家正在做的便是这个。
+这便引申出一些有意思的研究：假如有只蚂蚁科学家在黑板这一二维平面内对&lt;strong&gt;万有引力定律&lt;/strong&gt;进行研究，它测得的万有引力定律满足平方反比，它便会发现自己生活的空间其实并不是二维的，而是三维的。
+一些科学家正在做的便是这个。
+假如我们能够在宇宙的某处测得万有引力定律并不满足平方反比，而是满足$F\propto\frac{1}{r^{2.5}}$，甚至$F\propto\frac{1}{r^{3}}$，那就可以证明我们的宇宙其实有更高维的存在，这种现象被称为&lt;strong&gt;引力泄漏&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;3-理论推导&#34;&gt;3. 理论推导
+&lt;/h2&gt;&lt;h3 id=&#34;31-三维空间&#34;&gt;3.1 三维空间
+&lt;/h3&gt;&lt;p&gt;下面对先对我们生活的三维空间中万有引定律满足：$F\propto \frac{1}{r^{2}}$进行推导：
+引力场为保守场，符合高斯定理：&lt;/p&gt;
+$$
+\oint_{\partial V} \vec{g}\cdot d\vec{A}=-4\pi GM_{i}
+$$&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\partial V$表示任意闭合曲面;&lt;/li&gt;
+&lt;li&gt;$\vec{g}$表示引力场;&lt;/li&gt;
+&lt;li&gt;$d\vec{A}$表示微元的一个;&lt;/li&gt;
+&lt;li&gt;$G$为万有引力常数;&lt;/li&gt;
+&lt;li&gt;$M{i}$表示闭合曲面内（i&amp;ndash;&amp;gt;in）的总质量。&lt;/li&gt;
+&lt;li&gt;该式左边表示引力场线穿过闭合曲面的通量，右侧表示曲面包含的总质量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;接着，由于三维空间中场线沿球对称分布，以质量为中心的球面作为高斯面，该球面上任意一点的引力场大小处处相等，便有：&lt;/p&gt;
+$$
+g(r) \cdot 4\pi r^2=-4\pi GM_{s}
+$$$$
+g(r)=\frac{-GM_s}{r^2}
+$$$$
+\therefore g \propto\frac{1}{r^2}
+$$$$
+\square
+$$&lt;p&gt;其中：$M_s$表示该曲面上（”球壳“，s&amp;ndash;&amp;gt;surface)的质量。&lt;/p&gt;
+&lt;h3 id=&#34;32-n维空间&#34;&gt;3.2 n维空间
+&lt;/h3&gt;&lt;p&gt;到了n维空间，广义高斯定理可写为：&lt;/p&gt;
+$$
+\oint_{\partial V} \vec{g}\cdot d\vec{A} \propto M_{i} \Rightarrow g(r)\propto\frac{1}{r^{n-1}}
+$$&lt;h2 id=&#34;4-可视化模拟&#34;&gt;4. 可视化模拟
+&lt;/h2&gt;&lt;p&gt;在经过了简易的理论推导后，我又开始好奇：在三维空间中满足平方反比的万有引力作用下，质量小的行星会围绕质量大的恒星作近似圆周运动，&lt;strong&gt;那么在成n次方反比的空间中，形体的运动轨迹回事如何的呢？&lt;/strong&gt;
+下面我将用manim和python进行模拟：&lt;/p&gt;
+&lt;h3 id=&#34;41-平方反比&#34;&gt;4.1 平方反比
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17009.gif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17009.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;平方反比.gif&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;42-05次方反比&#34;&gt;4.2 0.5次方反比
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8e79066befcec6e17005.gif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8e79066befcec6e17005.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;0.5次方反比.gif&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;43-1次方反比&#34;&gt;4.3 1次方反比
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e1700a.gif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e1700a.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一次方反比.gif&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;44-15次方反比&#34;&gt;4.4 1.5次方反比
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8e79066befcec6e17006.gif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8e79066befcec6e17006.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;1.5次方反比.gif&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;45-25次方反比&#34;&gt;4.5 2.5次方反比
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17007.gif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17007.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;2.5次方反比.gif&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;46-3次方反比&#34;&gt;4.6 3次方反比
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17008.gif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pic1.imgdb.cn/item/67cc8e7a066befcec6e17008.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;3次方反比.gif&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;em&gt;在三次方的情况下，行星要么因速度过大而直接脱离轨道，发生逃逸，要么因速度过小而被逐渐“吸入”恒星。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;5-结语&#34;&gt;5. 结语
+&lt;/h2&gt;&lt;p&gt;至此，通过资料查询与学习，我终于了解到了万有引力定律平方反比的原因，解开了年少时的困惑。或许当年的我也没想到，这么一个小小的、不起眼的&lt;strong&gt;常数2&lt;/strong&gt;，竟然蕴含了如此深邃的、有关宇宙的奥秘。而从manim展示的行星轨道图我们也可以看到，其余所有n次方反比的行星轨道图都没有&lt;strong&gt;平方反比&lt;/strong&gt;的椭圆轨道来得如此简洁、优美，正是因为这样周期性的轨道，让我们拥有了一年四季、冬雪夏阳，我们是如此幸运与神奇地诞生在了这样的宇宙。
+&lt;strong&gt;平方反比律以椭圆的完美弧线，将星辰的呼吸与生命的脉搏，编织成了宇宙最深邃的数学与物理情书。&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

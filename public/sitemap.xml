@@ -3,15 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2025-03-04T00:11:50+08:00</lastmod>
+    <lastmod>2025-03-09T00:11:50+08:00</lastmod>
   </url><url>
     <loc>https://example.com/categories/</loc>
-    <lastmod>2025-03-04T00:11:50+08:00</lastmod>
-  </url><url>
-    <loc>https://example.com/categories/latex/</loc>
-    <lastmod>2025-03-04T00:11:50+08:00</lastmod>
+    <lastmod>2025-03-09T00:11:50+08:00</lastmod>
   </url><url>
     <loc>https://example.com/post/</loc>
+    <lastmod>2025-03-09T00:11:50+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/p/%E5%AF%B9%E4%BA%8E%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E5%AE%9A%E5%BE%8B%E5%B9%B3%E6%96%B9%E5%8F%8D%E6%AF%94%E7%9A%84%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2025-03-09T00:11:50+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2025-03-09T00:11:50+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/%E7%89%A9%E7%90%86/</loc>
+    <lastmod>2025-03-09T00:11:50+08:00</lastmod>
+  </url><url>
+    <loc>https://example.com/categories/latex/</loc>
     <lastmod>2025-03-04T00:11:50+08:00</lastmod>
   </url><url>
     <loc>https://example.com/p/tikz/</loc>
